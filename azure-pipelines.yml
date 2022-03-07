@@ -20,10 +20,10 @@ steps:
 
 - task: Docker@2
   inputs:
-      containerRegistry: 'ledoazuredevops'
-      repository: 'apicontagem-azuredevops'
-      command: 'buildAndPush'
-      Dockerfile: '**/Dockerfile'
-      tags: |
-        $(Build.BuildId)
-        latest
+    containerRegistry: 'ledoazuredevops.azurecr.io'
+    repository: 'apicontagem-azuredevops'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+    tags: |
+      $(Build.BuildId)
+      latest
